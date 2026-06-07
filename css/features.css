@@ -1,0 +1,40 @@
+.features {
+  background-color: #ffffff;
+}
+
+.features h3 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.features p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+
+.features-list-container {
+  display: flex;
+  column-gap: 24px;
+}
+
+.features-list-container li {
+  max-width: 264px;
+}
+
+.featured-icons-container {
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
+  height: 112px;
+  width: 264px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

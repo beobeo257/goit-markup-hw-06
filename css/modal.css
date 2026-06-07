@@ -1,0 +1,228 @@
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  background-color: #fcfcfc;
+  border-radius: 4px;
+  padding: 72px 24px 24px;
+  width: 408px;
+  height: 584px;
+  position: relative;
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 24px;
+  background-color: #e7e9fc;
+  cursor: pointer;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-icon {
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-button:focus,
+.close-button:hover {
+  background-color: #404bbf;
+}
+.close-button:focus .close-icon,
+.close-button:hover .close-icon {
+  fill: #ffffff;
+}
+
+.modal-discription {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-top: 8px;
+}
+
+.input {
+  display: block;
+  outline: none;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 38px;
+  width: 360px;
+  height: 40px;
+  max-width: 360px;
+  min-height: 40px;
+  margin-top: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.model-icons {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  fill: #2e2f42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-50%);
+}
+
+.input:hover + .model-icons,
+.input:focus + .model-icons {
+  fill: #4d5ae5;
+}
+
+.icons-container {
+  position: relative;
+}
+
+.form-comment {
+  display: block;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding: 8px 16px;
+  width: 360px;
+  height: 120px;
+  outline: none;
+  margin-top: 4px;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+
+.form-comment:hover,
+.form-comment:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.form-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.policy-discription {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-left: 8px;
+}
+
+.policy-accent {
+  line-height: 1.17;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+
+.policy-label {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.check-mark {
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-checkbox {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy:checked + .policy-label .custom-checkbox {
+  background-color: #404bbf;
+}
+
+.policy:focus + .policy-label .custom-checkbox {
+  border-color: #404bbf;
+}
+
+.policy:checked + .policy-label .custom-checkbox .check-mark {
+  opacity: 1;
+}
+
+.button-submit {
+  border-radius: 4px;
+  padding: 16px 65px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  border: none;
+  width: 169px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-top: 24px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-submit:focus,
+.button-submit:hover {
+  background-color: #404bbf;
+}
+
+.button-submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
