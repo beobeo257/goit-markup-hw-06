@@ -17,7 +17,7 @@ a {
 }
 
 .container {
-  width: 1158px;
+  width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -49,10 +49,22 @@ p {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 img {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+  }
 }

@@ -10,7 +10,6 @@
 .portfolio-container {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
 }
 
@@ -50,6 +49,11 @@
   overflow: hidden;
 }
 
+.portfolio-img {
+  width: 100%;
+  height: auto;
+}
+
 .portfolio-popup {
   position: absolute;
   top: 0;
@@ -70,8 +74,21 @@
 }
 .portfolio-popup-list {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 288px;
+  min-height: 360px;
 }
 
 .portfolio-popup-list:hover .portfolio-popup {
   transform: translateY(0);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-container {
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+  .portfolio-popup-list {
+    max-width: 356px;
+    height: auto;
+  }
 }

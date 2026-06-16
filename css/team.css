@@ -4,8 +4,11 @@
 
 .team-container {
   display: flex;
-  column-gap: 24px;
+  row-gap: 72px;
+  flex-direction: column;
+  align-items: center;
 }
+
 .team-card {
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
@@ -70,4 +73,14 @@
 .social-icons-link:hover,
 .social-icons-link:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .team-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 64px;
+    justify-content: center;
+  }
 }
