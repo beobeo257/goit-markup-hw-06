@@ -98,11 +98,15 @@
 }
 
 .burger-menu {
+  background-color: transparent;
+  border: none;
   fill: #2e2f42;
   position: absolute;
   cursor: pointer;
   top: 16px;
   right: 16px;
+  padding: 0 0;
+  line-height: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -120,6 +124,8 @@
     display: block;
     padding: 0;
     font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
   }
 
   .header-adress {
@@ -150,5 +156,7 @@
     display: block;
     padding: 16px 0;
     font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
   }
 }
