@@ -98,6 +98,6 @@
     row-gap: 48px;
   }
   .portfolio-popup-list {
-    max-width: calc(100% - 48px);
+    max-width: 360px;
   }
 }

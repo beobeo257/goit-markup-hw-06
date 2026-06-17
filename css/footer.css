@@ -28,7 +28,7 @@
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  max-width: 264px;
+  width: 264px;
   margin-top: 16px;
   text-align: start;
 }
@@ -156,6 +156,7 @@
 @media screen and (min-width: 768px) {
   .footer-container {
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
     justify-content: start;
@@ -180,12 +181,18 @@
     text-align: start;
   }
   .form-container {
-    max-width: 264px;
+    width: auto;
+    row-gap: 24px;
+  }
+  .email-footer {
+    min-width: 264px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: start;
     padding-left: 0;
     column-gap: 0;
